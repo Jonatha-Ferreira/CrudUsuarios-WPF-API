@@ -103,8 +103,8 @@ dotnet ef database update
 cd src/CrudUsuarios.API
 dotnet run
 ```
-A API será executada em:  
-➡️ `https://localhost:5001/swagger`
+A API será executada em / The API will run in:  
+➡️ `http://localhost:5191`
 
 ### 🔹 Executar o WPF / Run the WPF App
 ```bash
