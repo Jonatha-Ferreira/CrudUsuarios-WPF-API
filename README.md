@@ -59,6 +59,8 @@ The goal is to serve as a **portfolio project**, demonstrating solid architectur
 ---
 
 ## 🏗️ Estrutura do Projeto / Project Structure
+
+```
 CrudUsuarios/
 │
 ├── src/
@@ -70,100 +72,122 @@ CrudUsuarios/
 │
 └── tests/
     └── CrudUsuarios.Tests/            # Testes unitários
+```
 
-⚙️ Como Executar / How to Run
-🔹 Pré-requisitos / Requirements
+---
 
-.NET SDK 8.0+
+## ⚙️ Como Executar / How to Run
 
-Visual Studio 2022 ou VS Code
+### 🔹 Pré-requisitos / Requirements
+- [.NET SDK 8.0+](https://dotnet.microsoft.com/download)
+- Visual Studio 2022 ou VS Code
+- (opcional) SQLite Viewer para inspecionar o banco de dados
 
-(opcional) SQLite Viewer para inspecionar o banco de dados
-
-🔹 Executar a API / Run the API
+### 🔹 Executar a API / Run the API
+```bash
 cd src/CrudUsuarios.API
 dotnet run
+```
+A API será executada em:  
+➡️ `https://localhost:5001/swagger`
 
-
-A API será executada em:
-➡️ https://localhost:5001/swagger
-
-🔹 Executar o WPF / Run the WPF App
+### 🔹 Executar o WPF / Run the WPF App
+```bash
 cd src/CrudUsuarios.WPF
 dotnet run
+```
 
-🧠 Funcionalidades / Features
+---
 
-✅ Criar novo usuário
-✅ Listar todos os usuários
-✅ Editar informações
-✅ Excluir usuários
-✅ Interface moderna e responsiva (WPF + DataGrid)
-✅ Comunicação com API REST em tempo real
-✅ Banco de dados local SQLite
+## 🧠 Funcionalidades / Features
 
-🧱 Arquitetura / Architecture
+✅ Criar novo usuário  
+✅ Listar todos os usuários  
+✅ Editar informações  
+✅ Excluir usuários  
+✅ Interface moderna e responsiva (WPF + DataGrid)  
+✅ Comunicação com API REST em tempo real  
+✅ Banco de dados local SQLite  
+
+---
+
+## 🧱 Arquitetura / Architecture
+
+```
 Domain        → Entidades e regras de negócio puras
 Application   → Lógica de aplicação, DTOs e serviços
 Infrastructure→ Persistência de dados e contexto do EF
 API           → Exposição via endpoints REST
 WPF (UI)      → Interface gráfica, padrão MVVM
+```
 
-🖼️ Capturas de Tela / Screenshots
+---
 
-(Adicione aqui prints reais da interface e do Swagger quando o projeto estiver rodando)
+## 🖼️ Capturas de Tela / Screenshots
 
-Interface Principal	API Swagger
+*(Adicione aqui prints reais da interface e do Swagger quando o projeto estiver rodando)*
 
-	
-🧾 Exemplos de Requisições / API Requests
-➕ Criar Usuário / Create User
+| Interface Principal | API Swagger |
+|:--------------------|:------------|
+| ![WPF UI Example](https://via.placeholder.com/400x250?text=WPF+App+Screenshot) | ![Swagger Example](https://via.placeholder.com/400x250?text=Swagger+API) |
+
+---
+
+## 🧾 Exemplos de Requisições / API Requests
+
+### ➕ Criar Usuário / Create User
+```json
 POST /api/v1/users
 {
   "nome": "Jonatha Ferreira",
   "email": "jonatha@email.com",
   "telefone": "21999999999"
 }
+```
 
-🔍 Listar Usuários / Get All Users
+### 🔍 Listar Usuários / Get All Users
+```
 GET /api/v1/users
+```
 
-✏️ Atualizar Usuário / Update User
+### ✏️ Atualizar Usuário / Update User
+```
 PUT /api/v1/users/{id}
+```
 
-❌ Excluir Usuário / Delete User
+### ❌ Excluir Usuário / Delete User
+```
 DELETE /api/v1/users/{id}
+```
 
-🧠 Boas Práticas Aplicadas / Best Practices
+---
 
-Clean Architecture e separação de camadas
+## 🧠 Boas Práticas Aplicadas / Best Practices
 
-Injeção de dependência (IoC)
+- Clean Architecture e separação de camadas  
+- Injeção de dependência (IoC)  
+- MVVM para desacoplar UI e lógica  
+- DTOs e AutoMapper para transferência de dados  
+- Migrations controladas pelo EF Core  
+- Versionamento semântico no Git  
+- Commits padronizados (`feat:`, `fix:`, `refactor:`...)  
+- README bilíngue (PT-BR e EN)
 
-MVVM para desacoplar UI e lógica
+---
 
-DTOs e AutoMapper para transferência de dados
+## 🧑‍💻 Autor / Author
 
-Migrations controladas pelo EF Core
+**Jonatha da Silva Ferreira**  
+💼 [GitHub](https://github.com/Jonatha-Ferreira)  
+📧 jonatha@email.com  
+📍 Rio de Janeiro – RJ, Brasil  
 
-Versionamento semântico no Git
+---
 
-Commits padronizados (feat:, fix:, refactor:...)
+## 📜 Licença / License
 
-README bilíngue (PT-BR e EN)
+Este projeto está sob a licença MIT.  
+This project is licensed under the **MIT License**.
 
-🧑‍💻 Autor / Author
-
-Jonatha da Silva Ferreira
-💼 GitHub
-
-📧 jonatha@email.com
-
-📍 Rio de Janeiro – RJ, Brasil
-
-📜 Licença / License
-
-Este projeto está sob a licença MIT.
-This project is licensed under the MIT License.
-
-✨ Desenvolvido como projeto de portfólio para demonstrar habilidades em C#, WPF e ASP.NET Core. ✨
+---
+✨ _Desenvolvido como projeto de portfólio para demonstrar habilidades em C#, WPF e ASP.NET Core._ ✨
