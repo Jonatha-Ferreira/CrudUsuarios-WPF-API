@@ -12,7 +12,7 @@
 Este projeto é um **CRUD completo de Usuários** desenvolvido em **C#**, utilizando:
 - **ASP.NET Core Web API** para o backend (REST)
 - **WPF (Windows Presentation Foundation)** para a interface gráfica desktop
-- **Entity Framework Core (SQLite)** para persistência de dados
+- **Entity Framework Core (SQL Server)** para persistência de dados
 
 O objetivo é servir como **projeto de portfólio**, demonstrando boas práticas de arquitetura, versionamento e desenvolvimento full stack com .NET.
 
@@ -30,7 +30,7 @@ O objetivo é servir como **projeto de portfólio**, demonstrando boas práticas
 This project is a **complete User Management CRUD** built with **C#**, using:
 - **ASP.NET Core Web API** for the backend (REST)
 - **WPF (Windows Presentation Foundation)** for the desktop graphical interface
-- **Entity Framework Core (SQLite)** for data persistence
+- **Entity Framework Core (SQL Server)** for data persistence
 
 The goal is to serve as a **portfolio project**, demonstrating solid architecture, clean code, version control, and full-stack development using the .NET ecosystem.
 
@@ -48,7 +48,7 @@ The goal is to serve as a **portfolio project**, demonstrating solid architectur
 | Camada | Tecnologia Principal |
 |:--------|:--------------------|
 | API Backend | ASP.NET Core 8.0 |
-| Banco de Dados | SQLite + EF Core |
+| Banco de Dados | SQL Server + EF Core |
 | Interface Desktop | WPF (MVVM) |
 | ORM | Entity Framework Core |
 | Documentação API | Swagger / Swashbuckle |
@@ -81,7 +81,22 @@ CrudUsuarios/
 ### 🔹 Pré-requisitos / Requirements
 - [.NET SDK 8.0+](https://dotnet.microsoft.com/download)
 - Visual Studio 2022 ou VS Code
-- (opcional) SQLite Viewer para inspecionar o banco de dados
+- SQL Server (local ou remoto)
+- (opcional) SQL Server Management Studio (SSMS)
+
+### 🔹 Configurar Banco de Dados / Database Configuration
+No arquivo **appsettings.json** da API, defina a string de conexão:
+```json
+"ConnectionStrings": {
+  "DefaultConnection": "Server=localhost\\SQLEXPRESS;Database=CrudUsuariosDB;Trusted_Connection=True;TrustServerCertificate=True;"
+}
+```
+
+Execute as migrações para criar o banco de dados:
+```bash
+cd src/CrudUsuarios.API
+dotnet ef database update
+```
 
 ### 🔹 Executar a API / Run the API
 ```bash
@@ -107,7 +122,7 @@ dotnet run
 ✅ Excluir usuários  
 ✅ Interface moderna e responsiva (WPF + DataGrid)  
 ✅ Comunicação com API REST em tempo real  
-✅ Banco de dados local SQLite  
+✅ Banco de dados SQL Server  
 
 ---
 
