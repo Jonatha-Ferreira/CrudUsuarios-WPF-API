@@ -191,9 +191,8 @@ DELETE /api/v1/users/{id}
 ## 🧑‍💻 Autor / Author
 
 **Jonatha da Silva Ferreira**  
-💼 [GitHub](https://github.com/Jonatha-Ferreira)  
-📧 jonatha@email.com  
-📍 Rio de Janeiro – RJ, Brasil  
+💼 [Linkedin](https://www.linkedin.com/in/jonatha-da-silva-ferreira-5b2939222/)  
+📧 jomjom1jonatha@gmail.com
 
 ---
 
