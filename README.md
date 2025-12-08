@@ -140,8 +140,6 @@ WPF (UI)      → Interface gráfica, padrão MVVM
 
 ## 🖼️ Capturas de Tela / Screenshots
 
-*(Adicione aqui prints reais da interface e do Swagger quando o projeto estiver rodando)*
-
 | Interface Principal | API Swagger |
 |:--------------------|:------------|
 | ![WPF UI Example](https://via.placeholder.com/400x250?text=WPF+App+Screenshot) | ![Swagger Example](https://via.placeholder.com/400x250?text=Swagger+API) |
